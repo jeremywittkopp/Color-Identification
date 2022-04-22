@@ -33,19 +33,19 @@ figure;
 for i = 1: size(img, 3)
     qi = 1 + 3 * (i - 1);
     
-    subplot(2, 6, qi);
+    subplot(4, 6, qi);
     imshow(imgs(:, :, :, i));
     title(['Original ', num2str(i)]);
     axis square;
     set(gca, 'XTick', [], 'YTick', []);
 
-    subplot(2, 6, qi+1);
+    subplot(4, 6, qi+1);
     imshow(preds(:, :, :, i));
     title(['Colors Identified ', num2str(i)]);
     axis square;
     set(gca, 'XTick', [], 'YTick', []);
     
-    subplot(2, 6, qi+2);
+    subplot(4, 6, qi+2);
     imagesc(F(:, :, i));
     title(['Feature Map ', num2str(i)]);
     axis square;
